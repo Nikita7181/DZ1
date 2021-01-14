@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
     if (program_type == "coder") 
     {
         if (argc < 5) {
-            std::cerr << "Too few args\n";
+            std::cout << "Too few args\n";
             return -1;
         }
         srand(atoi(argv[2]));
@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
         std::ofstream fd_out(argv[4], std::ios::binary);
         if (!fd_in.is_open()) 
         {
-            std::cerr << "File not opened\n";
+            std::cout << "File not opened\n";
             return -1;
         }
 
@@ -124,7 +124,7 @@ int main(int argc, char *argv[])
     if (program_type == "decoder") 
     {
         if (argc < 4) {
-            std::cerr << "Too few args\n";
+            std::cout << "Too few args\n";
             return -1;
         }
         srand(atoi(argv[2]));
@@ -134,7 +134,7 @@ int main(int argc, char *argv[])
         std::ofstream res(RESULT);
         if (!input.is_open() || !res.is_open()) 
         {
-            std::cerr << "File not opened\n";
+            std::cout << "File not opened\n";
             return -1;
         }
 
