@@ -12,12 +12,12 @@
 #define MASK 0b00111111
 #define DEMASK 0b11111100
 
-typedef struct 
+typedef data_t
 {
     unsigned char string[BLOCK_SIZE];
     unsigned char gamma[BLOCK_SIZE];
     size_t len;
-} data_t;
+};
 
 void shift_enc(data_t &text, int shift) 
 {
